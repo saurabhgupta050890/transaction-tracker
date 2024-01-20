@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      try {
-        document.documentElement.setAttribute(
-          "data-theme",
-          localStorage.getItem("theme")
-        );
-      } catch (e) {}
-    </script>
     <title>Transaction Tracker</title>
     <script type="module" src="/src/main.ts"></script>
   </head>
@@ -20,7 +12,7 @@
       <a class="btn btn-ghost text-xl">Transaction Tracker</a>
       <label class="swap swap-rotate ml-auto mr-4">
         <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" class="theme-controller" value="light" />
+        <input id="light-mode" type="checkbox" class="theme-controller" value="light" />
 
         <!-- sun icon -->
         <svg
@@ -44,6 +36,7 @@
           />
         </svg>
       </label>
+      <input id="dark-mode" type="checkbox" class="theme-controller appearance-none" disabled value="dark" />
     </header>
     <main class="p-4">
       <div class="flex gap-4 md:flex-row flex-col justify-center">
